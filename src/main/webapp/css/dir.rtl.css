@@ -92,6 +92,7 @@
 
 .record-toolbar-right {
   left: 6px;
+  right:unset;
 }
 
 
@@ -163,9 +164,10 @@
 }
 
 .nav-tree li.folder > a::after {
-  content: "\f054";
+  content: "\f053";
   left: 16px;
   right: unset;
+    border-left: 0;
 }
 
 .nav-tree li > a > .nav-label {
@@ -815,3 +817,4 @@ table.treetable .tree-button img {
 .pull-right{
   float: left !important;
 }
+
