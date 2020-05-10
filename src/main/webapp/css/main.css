@@ -15,7 +15,6 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-
 html, body {
   overflow: hidden;
   padding: 0 !important;
@@ -55,7 +54,7 @@ b, strong {
 }
 
 header .navbar .brand-logo {
-  float: right;
+  float: left;
 }
 
 header .navbar .brand-logo img {
@@ -84,7 +83,7 @@ header .nav-menu-bar li.empty > a > i {
 
 header .nav-menu-bar li.empty > a,
 header .navbar .nav-shortcuts > li > a {
-  padding: 9px 2px 10px 5px;
+  padding: 9px 5px 10px;
 }
 
 header .nav-menu-bar li > a > img {
@@ -95,8 +94,7 @@ header .nav-menu-bar li > a > img {
 }
 
 header .navbar .nav-shortcuts > .divider-vertical {
-  margin-right:4px;
-  margin-top: 0px;
+  margin: 0 4px;
 }
 
 header .navbar .nav-shortcuts > li > a > i {
@@ -119,7 +117,7 @@ header .navbar .nav-shortcuts .nav-link-tasks .badge {
     width: 11px;
     height: 9px;
     top: 1px;
-    left: -3px;
+    right: -3px;
 }
 
 header .navbar .nav-link-user > img {
@@ -162,7 +160,7 @@ header .navbar .nav-link-user-sub {
 
 .loading-counter {
   padding: 4px 8px 6px 8px;
-  border-radius: 0px 4px 4px 0px;
+  border-radius: 0px 0px 4px 4px;
 }
 
 .blocker-overlay {
@@ -343,7 +341,7 @@ header .navbar .nav-link-user-sub {
 
 #offcanvas-toggle {
     margin: 0;
-    margin-right: 4px;
+    margin-left: 4px;
 }
 
 #offcanvas-toggle a {
@@ -355,18 +353,18 @@ header .navbar .nav-link-user-sub {
   width: inherit;
   min-width: 249px;
   max-width: 249px;
-  float: right;
+  float: left;
   height: 100%;
   position: relative;
   overflow-x: hidden;
   overflow-y: auto;
 
-  border-left: 1px solid #d3d3d3;
+  border-right: 1px solid #d3d3d3;
 }
 
 #offcanvas.hidden-menu {
   position: relative;
-  right: -250px;
+  left: -250px;
   width: calc(100% + 250px);
 }
 
@@ -378,20 +376,20 @@ header .navbar .nav-link-user-sub {
 #view-tabs {
   height: 100%;
   position: absolute;
-  right: 250px;
-  left: 0px;
+  left: 250px;
+  right: 0px;
 }
 
 @media screen and (min-width: 769px) {
   #offcanvas:not(.hidden-menu) {
-    right: 0;
+    left: 0;
     width: 100%;
     position: relative;
     transition: all 0.25s ease-out;
   }
   #offcanvas.inactive {
     position: relative;
-    right: -250px;
+    left: -250px;
     width: calc(100% + 250px);
   }
   #offcanvas.inactive #sidebar {
@@ -407,7 +405,7 @@ header .navbar .nav-link-user-sub {
   #offcanvas {
     position: relative;
     transition: all 0.25s ease-out;
-    right: -250px;
+    left: -250px;
     width: calc(100% + 250px);
   }
   #sidebar {
@@ -415,7 +413,7 @@ header .navbar .nav-link-user-sub {
     top: 0;
   }
   #offcanvas.active {
-    right: 0;
+    left: 0;
   }
   #offcanvas.active #sidebar {
     position: relative;
@@ -425,7 +423,6 @@ header .navbar .nav-link-user-sub {
 .navigation-tabs ul.nav-tabs-main {
   margin-bottom: 0px;
   height: 31px;
-  right: 0px !important;
 }
 
 .navigation-tabs {
@@ -436,11 +433,11 @@ header .navbar .nav-link-user-sub {
 .navigation-tabs > .nav-tabs-wrap li.dirty a:before,
 .navigation-tabs > .nav-tabs li.dirty a:before {
   content: '*';
-  margin-left: 2px;
+  margin-right: 2px;
 }
 
 .navigation-tabs > .nav-tabs-wrap li.notclosable a {
-  padding-left: 12px;
+  padding-right: 12px;
 }
 
 .visible-false {
@@ -591,7 +588,7 @@ header .navbar .nav-link-user-sub {
 }
 .record-toolbar-right {
   top: 0;
-  left: 6px;
+  right: 6px;
   position: absolute;
 }
 

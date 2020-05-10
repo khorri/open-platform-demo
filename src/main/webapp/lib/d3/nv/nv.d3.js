@@ -24,7 +24,6 @@ var rtl=$('html').attr('dir');
 			rtl=false;
 		else
 			rtl=rtl==='rtl';
-console.log($('html'));
 // Function bind polyfill
 // Needed ONLY for phantomJS as it's missing until version 2.0 which is unreleased as of this comment
 // https://github.com/ariya/phantomjs/issues/10522
