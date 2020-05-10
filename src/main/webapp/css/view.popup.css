@@ -1,7 +1,7 @@
 /**
  * Axelor Business Solutions
  *
- * Copyright (C) 2005-2020 Axelor (<http://axelor.com>).
+ * Copyleft (C) 2005-2020 Axelor (<http://axelor.com>).
  *
  * This program is free software: you can redistribute it and/or  modify
  * it under the terms of the GNU Affero General Public License, version 3,
@@ -19,8 +19,8 @@
   padding: 0;
   border: 0;
   top: 30px !important;
-  left: 0 !important;
   right: 0 !important;
+  left: 0 !important;
   display: flex;
   flex-flow: column nowrap;
 }
@@ -47,9 +47,17 @@
   border-radius: 0;
 }
 
+.ui-dialog .ui-dialog-title {
+    float: right;
+}
+
 .ui-dialog .ui-dialog-titlebar-close.ui-state-hover {
   background: none;
   border: 0;
+}
+
+.btn-group .btn[ng-click="onPrev()"]{
+  float:left;
 }
 
 .ui-dialog .ui-dialog-titlebar-close:hover,
@@ -64,7 +72,7 @@
 
 .ui-dialog .ui-dialog-titlebar-close {
   top: 20px;
-    right: .5em;
+    left: .5em;
   height: auto;
   width: auto;
   opacity: 0.2;
@@ -88,6 +96,8 @@
   font-size: 20px;
   height: 20px;
   width: 12px;
+  float: left;
+  
 }
 
 .ui-dialog .ui-dialog-titlebar-close.ui-state-focus {
@@ -99,7 +109,7 @@
 .ui-dialog .ui-dialog-titlebar-max,
 .ui-dialog .ui-dialog-titlebar-collapse {
   position: absolute;
-  right: 1.6em;
+  left: 1.6em;
   top: 7px;
   opacity: 0.2;
 }
@@ -111,7 +121,7 @@
 }
 
 .ui-dialog .ui-dialog-titlebar-collapse {
-    right: 2.6em;
+    left: 2.6em;
 }
 
 .ui-dialog .ui-dialog-titlebar-close span::before {
@@ -170,20 +180,20 @@
 }
 
 .ui-dialog-buttonpane .btn-group > .btn:first-child {
-  margin-left: 0;
+  margin-right: 0;
 }
 
 .ui-dialog-buttonpane .btn-group > .btn:last-child {
-  margin-left: -1px;
+  margin-right: -1px;
 }
 
-.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset-left button {
-  margin-left: 0.4em;
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset-right button {
+  margin-right: 0.4em;
 }
 
 .ui-dialog-titlebar .record-pager {
   position: absolute;
-  right: 76px;
+  left: 76px;
     top: 8px;
     line-height: 25px;
 }
@@ -252,14 +262,14 @@
   .ui-dialog .ui-dialog-titlebar,
   .ui-dialog .ui-dialog-buttonpane {
     position: absolute;
-    left: 0;
     right: 0;
+    left: 0;
   }
   .ui-dialog {
     position: absolute;
     margin: 8px !important;
     top: 0 !important;
-    left: 0 !important;
+    right: 0 !important;
     width: calc(100% - 16px) !important;
     height: calc(100% - 16px) !important;
     max-height: calc(100% - 16px) !important;
@@ -293,7 +303,7 @@
 
 .ui-dialog.maximized {
   top: 0 !important;
-  left: 0 !important;
+  right: 0 !important;
   margin: 8px !important;
   width: calc(100% - 16px) !important;
   height: calc(100% - 16px) !important;
@@ -318,23 +328,23 @@
 }
 .ui-dialog .translation-form i.fa-times {
   line-height: 28px;
-  margin-right: -12px;
-  float: right;
+  margin-left: -12px;
+  float: left;
 }
 .ui-dialog .translation-form i.fa-plus {
-  margin-right: 4px;
+  margin-left: 4px;
 }
 .ui-dialog .translation-form form {
   margin: 0;
-  margin-right: 8px;
+  margin-left: 8px;
 }
 .ui-dialog .translation-form form label {
   font-weight: 600;
   min-height: 0;
-  margin-left: 6px;
+  margin-right: 6px;
 }
 .ui-dialog .translation-form form input {
-  margin-left: 6px;
+  margin-right: 6px;
 }
 .ui-dialog .translation-form form hr {
   margin: 8px 0;

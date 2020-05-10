@@ -47,10 +47,6 @@
         return false;
       }
 
-      if (_grid.getColumns()[cell.cell].canMove && !_grid.getColumns()[cell.cell].canMove()) {
-        return false;
-      }
-
       _dragging = true;
       e.stopImmediatePropagation();
 

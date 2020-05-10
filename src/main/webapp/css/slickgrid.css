@@ -40,6 +40,11 @@
   border-bottom: 1px solid #ddd;
 }
 
+.slickgrid .slick-header-columns {
+  right: 0px !important;;
+  left:-1000px !important;;
+}
+
 .slickgrid .slick-header-column {
   border-right: 1px solid #ddd;
 }
@@ -143,6 +148,19 @@
        box-sizing: border-box;
 }
 
+[dir=rtl] .slick-header-column {
+ float:right;
+ right: 0px !important;
+}
+
+[dir=rtl] .slick-headerrow-column,
+[dir=rtl] .slick-cell{
+ float: right;
+  right: 0px !important;
+  left: unset !important;
+  position: relative;
+}
+
 .slick-headerrow-column:last-child {
   border-right: transparent !important;
 }
@@ -166,6 +184,14 @@
   font-size: 14px;
   top: 5px;
   right: 6px;
+}
+
+[dir=rtl] .slick-headerrow i.combo-icon {
+  position: absolute;
+  font-size: 14px;
+  top: 5px;
+  left: 6px;
+  right:unset;
 }
 
 .slick-header-column.ui-state-default {
@@ -438,6 +464,7 @@
 
 .slick-sort-indicator {
   margin-left: 7px;
+  float:right;
 }
 
 .slick-sort-indicator-asc,
@@ -456,6 +483,14 @@
 
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
+}
+
+
+.slick-header-menubutton{
+  left:0;
+  right: unset;
+  border-right: thin ridge silver;
+   border-left: none;
 }
 
 .slick-header-menuitem {
@@ -552,6 +587,12 @@
 
 [ui-slick-editors] {
   background-color: #e7e7e7 !important;
+  
+}
+
+[dir=rtl] [ui-slick-editors] {
+  right: 0px !important;;
+  padding-right: 30px !important;;
 }
 
 .slick-editor {

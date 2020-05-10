@@ -1,7 +1,7 @@
 /**
  * Axelor Business Solutions
  *
- * Copyright (C) 2005-2020 Axelor (<http://axelor.com>).
+ * Copyleft (C) 2005-2020 Axelor (<http://axelor.com>).
  *
  * This program is free software: you can redistribute it and/or  modify
  * it under the terms of the GNU Affero General Public License, version 3,
@@ -37,18 +37,18 @@
   position: relative;
   width: 20px;
   height: 20px;
-  float: left;
+  float: right;
   outline: none;
 }
 
 .ibox input {
   opacity: 0 !important;
-  margin-left: -14px !important;
+  margin-right: -14px !important;
   position: absolute;
 }
 
 .ibox .title {
-  margin-left: 8px;
+  margin-right: 8px;
 }
 
 .ibox .item-label {
@@ -97,11 +97,11 @@
   height: 7px;
   border: 2px solid #fff;
   border-top: 0;
-  border-right: 0;
-  -webkit-transform: rotate(-45deg);
-     -moz-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  border-left: 0;
+  -webkit-transform: rotate(45deg);
+     -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .ibox:hover input:disabled + .box:before {
@@ -150,24 +150,24 @@
 
 .iswitch input:checked + .box:before {
     top: 50%;
-    right: 5px;
+    left: 5px;
     bottom: 50%;
-    left: 50%;
+    right: 50%;
     border-width: 0;
     border-radius: 5px
 }
 
 .iswitch input:checked + .box:after {
-    margin-left: 16px
+    margin-right: 16px
 }
 
 .iswitch .box:before {
     content: "";
     position: absolute;
     top: -1px;
-    right: -1px;
-    bottom: -1px;
     left: -1px;
+    bottom: -1px;
+    right: -1px;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 30px;
@@ -187,7 +187,7 @@
     background-color: #fff;
     border-radius: 50%;
     box-shadow: 1px 1px 3px rgba(0,0,0,0.25);
-    transition: margin-left .3s
+    transition: margin-right .3s
 }
 
 .ng-invalid > .ibox .box:before,
@@ -198,7 +198,7 @@
 .form-item-container > .ibox,
 .form-item-container > .iswitch {
   margin: 4px 0 !important;
-  float: left;
+  float: right;
 }
 
 .checkbox-inline .ibox .title {

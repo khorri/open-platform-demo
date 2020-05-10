@@ -120,10 +120,10 @@
 
 .nav-tree li > a > .nav-image,
 .nav-tree li > a > .nav-icon {
-  margin-right: 6px;
+  margin-left: 6px;
   width: 28px;
   height: 28px;
-  float: left;
+  float: right;
   display: inline-block;
   margin-top: -4px;
   border-radius: 4px;
@@ -170,16 +170,16 @@
 }
 
 .nav-tree > li.open {
-  border-left: 4px solid #0275d8;
+  border-right: 4px solid #0275d8;
   transition: all .35s ease;
 }
 
 .nav-tree li.folder > a::after {
   font-family: "FontAwesome";
   font-size: 10px;
-  content: "\f053";
+  content: "\f054";
   position: absolute;
-  right: 16px;
+  left: 16px;
   z-index: 2;
 }
 
@@ -241,6 +241,7 @@
 .nav-tree li > a > .nav-label {
   display: flex;
   align-items: flex-start;
+  margin-right: 25px; 
 }
 
 /* 1st level */
@@ -250,15 +251,15 @@
 
 /* 2nd level */
 .nav-tree > li > ul > li > a {
-  padding-left: 42px;
+  padding-right: 32px;
 }
 
 /* 3rd level */
 .nav-tree > li > ul > li > ul > li > a {
-  padding-left: 52px;
+  padding-right: 52px;
 }
 
 /* 4th level and beyond */
 .nav-tree > li > ul > li > ul > li > ul li > a {
-  padding-left: 62px;
+  padding-right: 62px;
 }

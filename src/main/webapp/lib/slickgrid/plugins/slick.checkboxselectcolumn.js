@@ -16,7 +16,6 @@
       columnId: "_checkbox_selector",
       cssClass: null,
       toolTip: "Select/Deselect All",
-      multiSelect: true,
       width: 30
     };
 
@@ -29,7 +28,6 @@
         .subscribe(_grid.onClick, handleClick)
         .subscribe(_grid.onHeaderClick, handleHeaderClick)
         .subscribe(_grid.onKeyDown, handleKeyDown);
-      _options.multiSelect = grid.getOptions().multiSelect;
     }
 
     function destroy() {
@@ -52,13 +50,11 @@
       }
       _selectedRowsLookup = lookup;
       _grid.render();
-      
-      if (_options.multiSelect) {
-        if (selectedRows.length && selectedRows.length == _grid.getDataLength()) {
-          _grid.updateColumnHeader(_options.columnId, "<label class='ibox'><input type='checkbox' checked='checked'><span class='box'></span></label>", _options.toolTip);
-        } else {
-          _grid.updateColumnHeader(_options.columnId, "<label class='ibox'><input type='checkbox'><span class='box'></span></label>", _options.toolTip);
-        }
+
+      if (selectedRows.length && selectedRows.length == _grid.getDataLength()) {
+        _grid.updateColumnHeader(_options.columnId, "<input type='checkbox' checked='checked'>", _options.toolTip);
+      } else {
+        _grid.updateColumnHeader(_options.columnId, "<input type='checkbox'>", _options.toolTip);
       }
     }
 
@@ -77,7 +73,7 @@
 
     function handleClick(e, args) {
       // clicking on a row select checkbox
-      if (_grid.getColumns()[args.cell].id === _options.columnId && $(e.target).is(":checkbox,.box")) {
+      if (_grid.getColumns()[args.cell].id === _options.columnId && $(e.target).is(":checkbox")) {
         // if editing, try to commit
         if (_grid.getEditorLock().isActive() && !_grid.getEditorLock().commitCurrentEdit()) {
           e.preventDefault();
@@ -92,15 +88,13 @@
     }
 
     function toggleRowSelection(row) {
-      var selection = [];
       if (_selectedRowsLookup[row]) {
-        selection = $.grep(_grid.getSelectedRows(), function (n) {
+        _grid.setSelectedRows($.grep(_grid.getSelectedRows(), function (n) {
           return n != row
-        });
+        }));
       } else {
-        selection = _options.multiSelect ? _grid.getSelectedRows().concat(row) : [row];
+        _grid.setSelectedRows(_grid.getSelectedRows().concat(row));
       }
-      _grid.setSelectedRows(selection);
     }
 
     function handleHeaderClick(e, args) {
@@ -129,7 +123,7 @@
     function getColumnDefinition() {
       return {
         id: _options.columnId,
-        name: _options.multiSelect ? "<label class='ibox'><input type='checkbox'><span class='box'></span></label>" : "<span class='slick-column-name'>&nbsp;</span>",
+        name: "<input type='checkbox'>",
         toolTip: _options.toolTip,
         field: "sel",
         width: _options.width,
@@ -142,10 +136,9 @@
 
     function checkboxSelectionFormatter(row, cell, value, columnDef, dataContext) {
       if (dataContext) {
-    	var type = _options.multiSelect ? "checkbox" : "radio";
         return _selectedRowsLookup[row]
-            ? "<label class='ibox'><input type='" + type + "' checked='checked'><span class='box'></span></label>"
-            : "<label class='ibox'><input type='" + type + "'><span class='box'></span></label>";
+            ? "<input type='checkbox' checked='checked'>"
+            : "<input type='checkbox'>";
       }
       return null;
     }

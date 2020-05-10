@@ -1,7 +1,7 @@
 /**
  * Axelor Business Solutions
  *
- * Copyright (C) 2005-2020 Axelor (<http://axelor.com>).
+ * Copyleft (C) 2005-2020 Axelor (<http://axelor.com>).
  *
  * This program is free software: you can redistribute it and/or  modify
  * it under the terms of the GNU Affero General Public License, version 3,
@@ -48,7 +48,7 @@
 .bar-side {
   width: 25%;
   min-width: 15em;
-  margin-left: 14px;
+  margin-right: 14px;
 }
 
 .bar-container.has-side > .bar-main {
@@ -101,7 +101,7 @@
 }
 
 .panel .panel-header .panel-icon {
-    margin-right: 8px;
+    margin-left: 8px;
     padding: 2px 4px;
     border-radius: 4px;
 }
@@ -113,11 +113,11 @@
 .panel .panel-header .panel-image {
     width: 16px;
     height: 16px;
-    margin-right: 8px;
+    margin-left: 8px;
 }
 
 .panel .panel-header .panel-icons {
-  margin-left: 4px;
+  margin-right: 4px;
 }
 
 .panel .panel-header .panel-icons a {
@@ -139,8 +139,8 @@
 }
 
 .panel .panel-header .dropdown-menu {
-  left: inherit;
-  right: 0;
+  right: inherit;
+  left: 0;
 }
 
 .panel.collapsed .panel-header {
@@ -185,7 +185,7 @@
 }
 
 .panel .row-fluid > .form-item-hidden:first-child + .form-item {
-  margin-left: 0;
+  margin-right: 0;
 }
 
 .panel .row-fluid:last-child > .form-item-hidden {
@@ -232,7 +232,7 @@
 .panel-layout .form-item-container.readonly > a,
 .panel-layout .form-item-container.readonly > input,
 .panel-layout .form-item-container.readonly > span.display-text {
-  padding-left: 0;
+  padding-right: 0;
 }
 
 .panel-layout .readonly > .o2m-list > .o2m-list-row > a {
@@ -264,9 +264,9 @@
 .panel-layout .form-item-container.editable input[type="tel"],
 .panel-layout .form-item-container.editable .tag-select {
   border-top-width: 0;
-  border-left-width: 0;
   border-right-width: 0;
-  padding-left: 0;
+  border-left-width: 0;
+  padding-right: 0;
 }
 
 .panel-layout .slick-editor .form-item-container.editable input[type="text"],
@@ -276,12 +276,12 @@
 .panel-layout .slick-editor .form-item-container.editable input[type="url"],
 .panel-layout .slick-editor .form-item-container.editable .tag-select {
   border-top-width: 1px;
-  border-left-width: 1px;
   border-right-width: 1px;
-  padding-left: 6px;
+  border-left-width: 1px;
+  padding-right: 6px;
 }
 .panel-layout .slick-editor .form-item-container.editable .tag-select {
-  padding-left: 0;
+  padding-right: 0;
 }
 
 .panel-layout .slick-editor .form-item-container,
@@ -346,8 +346,8 @@
 
 .panel-related .panel-body .slickgrid {
   position: absolute;
-  left: 0px;
   right: 0px;
+  left: 0px;
   top: 0px;
   bottom: 0px;
   border: none;
@@ -403,7 +403,7 @@
   border-bottom: 1px solid #e7e7e7;
 }
 .bar-layout .portlet-header .divider-vertical {
-  border-left: 1px solid #D3D3D3;
+  border-right: 1px solid #D3D3D3;
 }
 
 .bar-layout .form-item-portlet,
@@ -418,7 +418,7 @@
 .panel-layout .m2o-editor-controls {
   position: absolute;
   top: -18px;
-  right: 0;
+  left: 0;
 }
 
 .panel-layout .m2o-editor-controls a {
@@ -474,9 +474,9 @@
 }
 
 .panel-layout .editable > .o2m-list .o2m-list-row .toggle-item button {
-  border-left: 0;
-  border-top: 0;
   border-right: 0;
+  border-top: 0;
+  border-left: 0;
   outline: none;
   height: 28px;
   color: #ccc;
@@ -627,40 +627,40 @@
 }
 
 /** some special classes */
-.border-left-none,
-.border-left-none.form-item-container,
-.border-left-none.form-item-container > input {
-  border-left: none;
-}
 .border-right-none,
-.border-left-none.form-item-container,
-.border-left-none.form-item-container > input  {
-  border-left: none;
+.border-right-none.form-item-container,
+.border-right-none.form-item-container > input {
+  border-right: none;
+}
+.border-left-none,
+.border-right-none.form-item-container,
+.border-right-none.form-item-container > input  {
+  border-right: none;
 }
 
 .address-list .o2m-list-row {
   width: 48.71%;
-  float: left;
-  margin-left: 0;
+  float: right;
+  margin-right: 0;
 }
 .address-list .o2m-list-add {
   width: 100%;
-  margin-left: 0;
+  margin-right: 0;
 }
 .address-list .o2m-list-row.even {
-  margin-left: 2.56%;
+  margin-right: 2.56%;
 }
 
 @media (max-width: 767px) {
   .address-list .o2m-list-row {
     width: 100%;
     float: none;
-    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 }
 .panel-layout .order-subtotal dl {
   max-width: 280px;
-  float: right;
+  float: left;
 }
 .panel-layout .order-subtotal dt,
 .panel-layout .order-subtotal dd {
@@ -668,14 +668,14 @@
 }
 
 .panel-layout .order-subtotal dt {
-  padding-right: 8px;
+  padding-left: 8px;
   font-weight: normal;
   white-space: normal;
   width: 55%;
 }
 .panel-layout .order-subtotal dd {
-  margin-left: 0;
-  text-align: right;
+  margin-right: 0;
+  text-align: left;
 }
 
 .panel-layout .order-subtotal dd:empty {
@@ -690,8 +690,8 @@
 
 @media (max-width: 767px) {
   .panel-layout .order-subtotal dt {
-    float: left;
-    text-align: right;
+    float: right;
+    text-align: left;
     width: 48%;
   }
 }
@@ -712,14 +712,14 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  margin-left: -7px;
   margin-right: -7px;
+  margin-left: -7px;
 }
 
 .panel-flex [class*="flex"] {
   width: 100%;
-  margin-left: 7px;
   margin-right: 7px;
+  margin-left: 7px;
 }
 
 .panel-flex .form-item-hidden {
@@ -783,8 +783,8 @@
   }
   .panel-flex [class*="flex"] {
     width: 100%;
-    margin-left: 0;
     margin-right: 0;
+    margin-left: 0;
   }
 }
 
@@ -799,12 +799,12 @@
 .help-item:after {
   font: normal normal normal 14px/1 FontAwesome;
   content: "\f10e";
-  margin-left: 6px;
+  margin-right: 6px;
 }
 .help-item:before {
   font: normal normal normal 14px/1 FontAwesome;
   content: "\f10d";
-  margin-right: 6px;
+  margin-left: 6px;
 }
 
 .info-button {
@@ -818,7 +818,7 @@
 .info-button > img {
   display: block;
   width: 32px;
-  float: left;
+  float: right;
 }
 
 .info-button > i {
@@ -834,12 +834,12 @@
 }
 
 .info-button-data {
-  float: left;
+  float: right;
   width: calc(100% - 32px);
   height: 100%;
   line-height: 22px;
-  padding-left: 8px;
-  text-align: left;
+  padding-right: 8px;
+  text-align: right;
 }
 
 .info-button-value {

@@ -12,7 +12,6 @@ nv.models = nv.models || {}; //stores all the possible models/components
 nv.charts = {}; //stores all the ready to use charts
 nv.logs = {}; //stores some statistics and potential error messages
 nv.dom = {}; //DOM manipulation functions
-
 // Node/CommonJS - require D3
 if (typeof(module) !== 'undefined' && typeof(exports) !== 'undefined' && typeof(d3) == 'undefined') {
     d3 = require('d3');
@@ -20,6 +19,12 @@ if (typeof(module) !== 'undefined' && typeof(exports) !== 'undefined' && typeof(
 
 nv.dispatch = d3.dispatch('render_start', 'render_end');
 
+var rtl=$('html').attr('dir');
+		if(rtl===undefined)
+			rtl=false;
+		else
+			rtl=rtl==='rtl';
+console.log($('html'));
 // Function bind polyfill
 // Needed ONLY for phantomJS as it's missing until version 2.0 which is unreleased as of this comment
 // https://github.com/ariya/phantomjs/issues/10522
@@ -5224,6 +5229,7 @@ nv.models.furiousLegend = function() {
         ;
 
     function chart(selection) {
+		
         selection.each(function(data) {
             var availableWidth = width - margin.left - margin.right,
                 container = d3.select(this);
@@ -5281,7 +5287,7 @@ nv.models.furiousLegend = function() {
                 .attr('text-anchor', 'start')
                 .attr('class','nv-legend-text')
                 .attr('dy', '.32em')
-                .attr('dx', '8');
+                .attr('dx', rtl?'-8':'8');
 
             var seriesText = series.select('text.nv-legend-text');
 
@@ -6280,7 +6286,7 @@ nv.models.legend = function() {
                 .attr('text-anchor', 'start')
                 .attr('class','nv-legend-text')
                 .attr('dy', '.32em')
-                .attr('dx', '8');
+                .attr('dx', rtl?'-8':'8');
 
             var seriesText = series.select('text.nv-legend-text');
 
@@ -9035,7 +9041,7 @@ nv.models.multiBarHorizontal = function() {
 
     var x0, y0; //used to store previous scales
     var renderWatch = nv.utils.renderWatch(dispatch, duration);
-
+	
     function chart(selection) {
         renderWatch.reset();
         selection.each(function(data) {
@@ -9216,7 +9222,7 @@ nv.models.multiBarHorizontal = function() {
             if (showValues && !stacked) {
                 bars.select('text')
                     .attr('text-anchor', function(d,i) { return getY(d,i) < 0 ? 'end' : 'start' })
-                    .attr('y', x.rangeBand() / (data.length * 2))
+                    .attr('y', x.rangeBand() / (data.length * 2)*(rtl?-1:1))
                     .attr('dy', '.32em')
                     .text(function(d,i) {
                         var t = valueFormat(getY(d,i))
@@ -14029,7 +14035,7 @@ nv.models.sparklinePlus = function() {
                     .data([currentValue]);
 
                 value.enter().append('text').attr('class', 'nv-currentValue')
-                    .attr('dx', rightAlignValue ? -8 : 8)
+                    .attr('dx', (rtl || rightAlignValue) ? -8 : 8)
                     .attr('dy', '.9em')
                     .style('text-anchor', rightAlignValue ? 'end' : 'start');
 

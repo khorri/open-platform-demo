@@ -1,7 +1,7 @@
 /**
  * Axelor Business Solutions
  *
- * Copyright (C) 2005-2020 Axelor (<http://axelor.com>).
+ * Copyleft (C) 2005-2020 Axelor (<http://axelor.com>).
  *
  * This program is free software: you can redistribute it and/or  modify
  * it under the terms of the GNU Affero General Public License, version 3,
@@ -34,8 +34,8 @@
 
 .mail-thread {
   margin-top: 16px;
-  margin-left: 20px;
-  border-left: 2px solid #ddd;
+  margin-right: 20px;
+  border-right: 2px solid #ddd;
 }
 
 .mail-composer {
@@ -48,7 +48,7 @@
 }
 
 .mail-composer .btn {
-  margin-right: 8px;
+  margin-left: 8px;
 }
 
 .mail-composer-buttons {
@@ -69,7 +69,7 @@
 }
 
 .mail-files i {
-  margin-right: 4px;
+  margin-left: 4px;
 }
 .mail-files i.fa-close {
   cursor: pointer;
@@ -80,7 +80,7 @@
   display: inline-block;
   width:  40px;
   height: 40px;
-  margin-left: -21px;
+  margin-right: -21px;
   border-radius: 500px;
   line-height: 40px;
     text-align: center;
@@ -109,13 +109,13 @@
 }
 
 .mail-thread .mail-message-indent {
-  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .mail-thread .mail-message {
   position: relative;
   border-radius: 0;
-  margin-left: 30px;
+  margin-right: 30px;
   margin-bottom: 20px;
   border: 1px solid #ddd;
   border-radius: 2px;
@@ -129,10 +129,10 @@
   width: 11px;
   height: 11px;
   border: 1px solid #ddd;
-  left: -7px;
+  right: -7px;
   top: 12px;
   background-color: #fff;
-  border-right: 0;
+  border-left: 0;
   border-bottom: 0;
   -webkit-transform: rotate(-45deg);
      -moz-transform: rotate(-45deg);
@@ -143,7 +143,7 @@
 .mail-thread .mail-message > .star {
   position: absolute;
   color: #d9534f;
-  left: 8px;
+  right: 8px;
 }
 
 .mail-thread .mail-message > .star i {
@@ -151,13 +151,13 @@
 }
 
 .mail-thread .mail-message-icons {
-  float: right;
+  float: left;
   margin: 10px;
 }
 
 .mail-thread .mail-message-icons i {
   cursor: pointer;
-  margin-left: 4px;
+  margin-right: 4px;
   color: #0088cc;
 }
 
@@ -198,8 +198,8 @@
   border-bottom: 1px dashed #ddd;
   text-align: center;
   margin-top: -15px;
-  margin-left: -2px;
-  border-left: 2px solid #fff;
+  margin-right: -2px;
+  border-right: 2px solid #fff;
 }
 
 .mail-thread-more .btn-load-more:hover {
@@ -219,7 +219,7 @@
 }
 
 .mail-thread-view .mail-thread-more {
-  border-left: 2px solid #f3f3f4;
+  border-right: 2px solid #f3f3f4;
 }
 
 .mail-messages > div > .mail-composer:first-child {
@@ -234,7 +234,7 @@
 }
 
 .mail-followers .panel-icons i {
-  margin-left: 8px;
+  margin-right: 8px;
   cursor: pointer;
 }
 
@@ -252,7 +252,7 @@
 .mail-followers .links i.fa-remove {
   cursor: pointer;
   margin-top: 3px;
-  margin-right: 4px;
+  margin-left: 4px;
 }
 
 .mail-message i.fa:hover,
@@ -286,7 +286,7 @@
 }
 
 .mail-message .track-tags .label {
-  margin-right: 2px;
+  margin-left: 2px;
 }
 
 .mail-message-body a.show-full {
@@ -330,8 +330,8 @@
 }
 
 .mail-group-form {
-  padding-left: 20px;
   padding-right: 20px;
+  padding-left: 20px;
 }
 
 .mail-group-form {
@@ -365,30 +365,30 @@
 }
 
 .grid-cards .grid-card,
-.grid-cards .grid-card-left,
-.grid-cards .grid-card-right {
+.grid-cards .grid-card-right,
+.grid-cards .grid-card-left {
   position: relative;
   display: inline-block;
   vertical-align: top;
 }
 
-.grid-cards .grid-card-left {
+.grid-cards .grid-card-right {
   overflow: hidden;
   border-collapse: separate;
 }
 
-.grid-cards .grid-card-left img {
+.grid-cards .grid-card-right img {
   width: 64px;
   min-height: 64px;
   padding: 2px;
 }
 
-.grid-cards .grid-card-right {
+.grid-cards .grid-card-left {
   width: calc(100% - 86px);
   min-height: 120px;
-  margin-left: 4px;
+  margin-right: 4px;
 }
 
-.grid-cards .grid-card-right .buttons {
+.grid-cards .grid-card-left .buttons {
   margin-top: 4px;
 }

@@ -17,6 +17,7 @@
  */
 .nav-tabs-wrap {
   position: relative;
+  
 }
 
 .nav-tabs-wrap a {
@@ -66,7 +67,7 @@
 .nav-tabs-strip .nav-tabs {
   display: block;
   position: absolute !important;
-  width: 100000px;
+  width: auto;
 }
 
 .nav-tabs-closable li {
@@ -80,13 +81,13 @@
 }
 
 .nav-tabs-closable li > a {
-  padding-right: 18px;
+  padding-left: 18px;
 }
 
 .nav-tabs-closable li > i {
   position: absolute;
   top: 5px;
-  right: 6px;
+  left: 6px;
   color: #ccc;
   cursor: pointer;
   font-size: 11px;

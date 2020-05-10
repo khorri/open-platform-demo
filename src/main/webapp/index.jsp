@@ -68,7 +68,7 @@ String tenantId = (String) session.getAttribute("tenantId");
 
 %>
 <!DOCTYPE html>
-<html lang="<%= info.getPageLang() %>" ng-app="axelor.app" ng-controller="AppCtrl" ng-cloak>
+<html lang="<%= info.getPageLang() %>" ng-app="axelor.app" ng-controller="AppCtrl" ng-cloak dir="rtl">
   <head>
     <meta charset="utf-8">
     <title><%= appTitle %></title>

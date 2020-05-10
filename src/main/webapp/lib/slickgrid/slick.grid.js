@@ -1119,6 +1119,7 @@ if (typeof Slick === "undefined") {
         if (rule) {
           rule.left.style.left = x + "px";
           rule.right.style.right = (canvasWidth - x - w) + "px";
+		  rule.left.style.width = w + "px";
         }
         x += columns[i].width;
       }

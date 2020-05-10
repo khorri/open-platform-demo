@@ -24,7 +24,11 @@
 @import url("../lib/jquery.timepicker/jquery-ui-timepicker-addon.css");
 
 @import url("../lib/bootstrap/css/bootstrap.css");
+@import url("../lib/bootstrap/css/bootstrap.rtl.css");
 @import url("../lib/bootstrap/css/bootstrap-responsive.css");
+@import url("../lib/bootstrap/css/bootstrap-responsive.rtl.css");
+@import url("../lib/bootstrap/css/rtl-xtra.min.css");
+
 @import url("../lib/font-awesome/css/font-awesome.css");
 
 @import url("../lib/slickgrid/slick.grid.css");
@@ -44,6 +48,7 @@
 
 @import url("../lib/codemirror/codemirror.min.css");
 @import url("../lib/wysiwyg/wysiwyg-editor.css");
+
 @import url("wysiwyg.css");
 
 @import url("main.css");
@@ -69,3 +74,11 @@
 @import url("colors.css");
 
 @import url("print.css") print;
+
+.pull-left{
+  float:right !important;
+}
+
+.pull-right{
+  float: left !important;
+}

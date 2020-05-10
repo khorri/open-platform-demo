@@ -320,6 +320,8 @@ table.form-layout fieldset {
   top: 0;
   right: 3px;
   height: 100%;
+  right: unset !important;
+  left: 0px;
 }
 
 .picker-input > .picker-icons > i.fa {
@@ -342,11 +344,11 @@ table.form-layout fieldset {
 }
 
 .picker-icons-3 > input {
-  padding-right: 54px !important;
+  padding-left: 54px !important;
 }
 
 .picker-icons-4 > input {
-  padding-right: 72px !important;
+  padding-left: 72px !important;
 }
 
 table.form-layout .tabbable-tabs .nav-tabs {
@@ -684,7 +686,7 @@ td.form-item > * {
 .form-item ul.radio-select > li,
 .form-item ul.checkbox-select > li,
 .form-item-container ul.boolean-radio > li {
-  float: left;
+  float: right;
   margin: 0 4px;
 }
 
@@ -836,7 +838,7 @@ label.has-help > span:after,
 }
 
 .subtotal {
-  float: right;
+  float: left;
 }
 
 .subtotal,
@@ -904,7 +906,7 @@ label.has-help > span:after,
 }
 
 .nav-select li.nav-step {
-  float: left;
+  float: right;
 }
 
 .nav-select a.nav-label {
@@ -945,7 +947,7 @@ label.has-help > span:after,
 
 .nav-select li.dropdown a.nav-label > span {
   display: inline-block;
-  float: left;
+  float: right;
   max-width: 96px;
   margin-left: 24px;
   margin-right: 6px;
@@ -1042,7 +1044,7 @@ label.has-help > span:after,
 
 .tag-select li,
 .tag-select .label {
-  float: left;
+  float: right;
   display: inline-block;
   margin: 2px 2px 0 0;
 }
@@ -1516,7 +1518,7 @@ label.has-help > span:after,
         width: 100%;
     }
     .filter-menu .filter-list > dl {
-        float: left;
+        float: right;
         margin: 0;
         padding: 0;
         width: 100%;
@@ -1564,6 +1566,8 @@ label.has-help > span:after,
   font-size: 12px;
 }
 
+
+
 ::-moz-placeholder { /* Firefox 19+ */
   font-size: 12px;
 }
@@ -1571,4 +1575,9 @@ label.has-help > span:after,
 :-ms-input-placeholder {
   font-size: 12px;
   color: #777 !important;
+}
+
+.ui-spinner-button {
+    left: 0;
+  right:unset;
 }

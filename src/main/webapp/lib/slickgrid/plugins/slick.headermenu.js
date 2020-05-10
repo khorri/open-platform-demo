@@ -83,7 +83,7 @@
     var _handler = new Slick.EventHandler();
     var _defaults = {
       buttonCssClass: null,
-      buttonImage: "../images/down.gif"
+      buttonImage: null
     };
     var $menu;
     var $activeHeaderColumn;
@@ -182,7 +182,7 @@
 
       if (!$menu) {
         $menu = $("<div class='slick-header-menu'></div>")
-          .appendTo(document.body);
+          .appendTo(_grid.getContainerNode());
       }
       $menu.empty();
 
@@ -190,11 +190,6 @@
       // Construct the menu items.
       for (var i = 0; i < menu.items.length; i++) {
         var item = menu.items[i];
-
-        if (item.separator) {
-          $("<div class='slick-header-menusep'></div>").appendTo($menu);
-          continue;
-        }
 
         var $li = $("<div class='slick-header-menuitem'></div>")
           .data("command", item.command || '')
@@ -223,25 +218,21 @@
         }
 
         $("<span class='slick-header-menucontent'></span>")
-          .html(item.title)
+          .text(item.title)
           .appendTo($li);
       }
 
 
       // Position the menu.
       $menu
-        .css("top", $(this).offset().top + $(this).height())
-        .css("left", $(this).offset().left);
-      
-      if (typeof menu.position === "function") {
-        menu.position($menu, $menuButton);
-      }
+        .offset({ top: $(this).offset().top + $(this).height(), left: $(this).offset().left });
+
 
       // Mark the header as active to keep the highlighting.
       $activeHeaderColumn = $menuButton.closest(".slick-header-column");
       $activeHeaderColumn
         .addClass("slick-header-column-active");
-      
+
       // Stop propagation so that it doesn't register as a header click event.
       e.preventDefault();
       e.stopPropagation();
@@ -267,6 +258,10 @@
             "item": item
           }, e, _self);
       }
+
+      // Stop propagation so that it doesn't register as a header click event.
+      e.preventDefault();
+      e.stopPropagation();
     }
 
     $.extend(this, {
