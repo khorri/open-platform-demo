@@ -39,7 +39,7 @@
   left: 0px;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 169px) {
   #offcanvas:not(.hidden-menu) {
     right: 0;
   }
@@ -219,8 +219,11 @@
 }
 
 .slick-sort-indicator {
-  margin-right: 7px;
+  margin-right: 0px;
   float:right;
+  position: absolute;
+  right: 4px;
+  top: 7px;
 }
 
 .slick-header-menubutton{
@@ -281,6 +284,7 @@
 
 .dms-file-list > .slickgrid {
   right: 250px;
+  left:unset;
 }
 
 .dms-file-list.has-no-tree .dms-folder-tree {

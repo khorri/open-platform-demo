@@ -23,7 +23,7 @@ header .navbar-inner{
     background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#781602), to(#EE5A02));
     background-image: -webkit-linear-gradient(right, rgb(120,22,2),  rgb(238,90,2));
     background-image: -o-linear-gradient(right, rgb(120,22,2),  rgb(238,90,2));
-    background-image: linear-gradient(to right, rgb(120,22,2), rgb(238,90,2));
+    background-image: linear-gradient(to right, rgb(120,22,2), rgb(236, 5, 5));
 }
 
 #sidebar {
@@ -170,12 +170,24 @@ margin: 5px 4px;
     border-radius: 14px !important;
 }
 
+.nav-tree > li.open {
+    border-right:none;
+}
 
-span.loading-counter{
-  width:300px;
-  display: block;
-  background-image: : url('img/loader.gif');
-    background-color: #fff;
-    
-  
+.nav-tree  li.open, 
+.nav-tree  li.active {
+    background: rgba(30,30,30,0.65);
+}
+
+.nav-tree li > a::after,
+.nav-tree li > a:hover::after, 
+.nav-tree li.active > a::after {
+    color: #rgba(200,100,100,0.4);
+    text-shadow: none;
+}
+
+.nav-tree li > a:hover, 
+.nav-tree li.active > a {
+    color: #fff;
+    background-color: unset;
 }
