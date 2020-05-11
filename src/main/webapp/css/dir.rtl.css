@@ -205,6 +205,10 @@
  right: 0px !important;
 }
 
+.slickgrid .slick-header-column:first-child {
+    border-right: none;
+}
+
 [dir=rtl] .slick-headerrow-column,
 [dir=rtl] .slick-cell{
  float: right;
@@ -236,6 +240,11 @@
 [dir=rtl] [ui-slick-editors] {
   right: 0px !important;;
   padding-right: 30px !important;;
+}
+
+.slickgrid .slick-header-column:last-child {
+  border-left: 1px solid #ddd;
+  border-right-color:#ddd;
 }
 
 /* tabs.css */
@@ -822,3 +831,7 @@ table.treetable .tree-button img {
   float: left !important;
 }
 
+.picker-icons-2 > input {
+  padding-left: unset !important;
+  padding-right: unset !important;
+}
