@@ -241,7 +241,14 @@ margin: 5px 4px;
 
 .btn
 {
-    background: #fff;
+    border-style: solid;
+    border-width: 1px;
+    border-collapse: collapse;
+    border-radius: 4px;
+}
+
+.btn-group>.btn
+{
     border-color:#eee;
     background-image: none;
     border-style: solid;
@@ -249,7 +256,30 @@ margin: 5px 4px;
     height: 30px;
     color:#800;
     border-collapse: collapse;
+    border-radius: 0;
+    background:#fff;
 }
+
+.record-toolbar .btn-group .dropdown-toggle .caret{
+    border-block-color: #800;
+}
+
+.record-toolbar .btn-group .dropdown-toggle:hover .caret{
+    border-block-color: #f44;
+}
+
+.record-toolbar .btn-group .btn{
+    text-shadow: none;    
+    
+}
+
+.record-toolbar .btn-group .btn:hover{
+    color: #f44;
+}
+
+.btn-group{
+    border-radius: 4px;    
+}s
 
 .btn:hover,
 .btn:focus,
@@ -292,4 +322,92 @@ margin: 5px 4px;
     background:#eee !important;
 }
 
+.panel{
+   border-width: 1px !important;
+    border-top-width: 4px !important;; 
+    border-style: solid;
+   border-radius: 6px 6px 0 0;
+}
 
+.panel .panel-header{
+    border: none !important;
+    border-radius: 0 !important;
+    padding:8px 8px 4px; 
+    background: rgba(255,255,255,0.9);
+}
+
+.panel .panel-body{
+    border: none !important;
+    border-radius: 0 !important;
+    background: #fff;
+}
+
+.panel .panel-header .panel-title{
+    font-size: 18px;
+}
+
+.panel .panel-header .panel-icons{
+    width:24px;
+    height: 24px;
+    margin:-4px 0 -2px 0;
+}
+
+.panel.panel-red{
+    border-color: #DB2828;
+    background-color:  #DB2828;
+}
+
+.panel.panel-default 	{
+    border-color: #68B8FB;
+    background-color: #68B8FB; 
+}
+.panel.panel-red 		 { border-color: #DB2828;background-color: #DB2828; }
+.panel.panel-orange 	{ border-color: #F2711C;background-color: #F2711C; }
+.panel.panel-yellow 	{ border-color: #B58105; background-color: #B58105; }
+.panel.panel-olive 		{ border-color: #8ABC1E; background-color: #8ABC1E; }
+.panel.panel-green 		{ border-color: #1EBC30; background-color: #1EBC30; }
+.panel.panel-teal 		{ border-color: #10A3A3; background-color: #10A3A3; }
+.panel.panel-blue 		{ border-color: #2185D0; background-color: #2185D0; }
+.panel.panel-violet 		{ border-color: #6435C9; background-color: #6435C9; }
+.panel.panel-purple 		{ border-color: #A333C8; background-color: #A333C8; }
+.panel.panel-pink 		{ border-color: #E03997; background-color: #E03997; }
+.panel.panel-brown 		{ border-color: #A5673F; background-color: #A5673F; }
+.panel.panel-grey 		{ border-color: #767676; background-color: #767676; }
+.panel.panel-black 		{ border-color: #1B1C1D; background-color: #1B1C1D; }
+.panel.panel-white		{ border-color: #F9FAFB; background-color: #F9FAFB; }
+
+.panel-related .panel-header .icons-bar > a, 
+.one2many-item .navbar .icons-bar > a, 
+.many2many-item .navbar .icons-bar > a {
+  border:1px solid #fcc;
+  padding: 4px 3px 4px 6px;
+  margin:0px;
+  margin-right: -1px;
+  color:#600;
+  text-decoration: none;
+}
+
+.panel-related .panel-header .icons-bar > a:hover,
+.one2many-item .navbar .icons-bar > a:hover,
+.many2many-item .navbar .icons-bar > a:hover,
+.panel-related .panel-header .icons-bar > a:focus,
+.one2many-item .navbar .icons-bar > a:focus,
+.many2many-item .navbar .icons-bar > a:focus
+{
+    color: #f44;
+}
+
+
+.panel-related .panel-header .icons-bar > a> .fa, 
+.one2many-item .navbar .icons-bar > a> .fa, 
+.many2many-item .navbar .icons-bar > a> .fa {
+    margin-left: 2px;
+    margin-right:2px;
+}
+
+.panel-related .panel-header .icons-bar,
+.one2many-item .navbar .icons-bar, 
+.many2many-item .navbar .icons-bar{
+    margin-left: 2px;
+    margin-right:2px;
+}

@@ -239,7 +239,8 @@
 
 [dir=rtl] [ui-slick-editors] {
   right: 0px !important;;
-  padding-right: 30px !important;;
+  padding-right: 30px !important;
+  padding-left:unset !important;
 }
 
 .slickgrid .slick-header-column:last-child {
@@ -347,12 +348,23 @@
 
 }
 
-.ibox input:checked + .box:after {
-  border-left: 0;
-    -webkit-transform: rotate(45deg);
-     -moz-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
+ibox input:checked + .box::after {
+    border: 2px solid #fff;
+        border-top-color: rgb(255, 255, 255);
+        border-top-style: solid;
+        border-top-width: 2px;
+        border-right-color: rgb(255, 255, 255);
+        border-right-style: solid;
+        border-right-width: 2px;
+        border-left-color: rgb(255, 255, 255);
+        border-left-style: solid;
+        border-left-width: 2px;
+    border-top: 0;
+    border-right: 0;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
 }
 
 .iswitch input:checked + .box:before {
@@ -382,10 +394,16 @@
 
 .picker-icons-3 > input {
   padding-left: 54px !important;
+  padding-right: unset !important;
 }
 
 .picker-icons-4 > input {
   padding-left: 72px !important;
+}
+
+.picker-input > input, .picker-icons-1 > input {
+    padding-left: 18px !important;
+  padding-right: unset !important;
 }
 
 .form-item ul.radio-select > li,
@@ -399,7 +417,7 @@
 }
 
 .nav-select li.nav-step {
-  float: right;
+  float: left;
 }
 
 .nav-select li.dropdown a.nav-label > span {
@@ -693,7 +711,6 @@
 
 .ui-dialog .ui-dialog-titlebar-collapse {
     left: 2.6em;
-	left: unset;
 }
 
 .ui-dialog-buttonpane .btn-group > .btn:first-child {
@@ -834,4 +851,70 @@ table.treetable .tree-button img {
 .picker-icons-2 > input {
   padding-left: unset !important;
   padding-right: unset !important;
+}
+
+.kanban-card.danger {
+    border-right: 3px solid #d9534f;
+   border-left: 1px solid #e7eaec;
+}
+
+.kanban-card.primary {
+  border-right: 3px solid #428bca;
+  border-left: 1px solid #e7eaec;
+}
+
+.kanban-card.warning {
+  border-right: 3px solid #f0ad4e;
+  border-left: 1px solid #e7eaec;
+}
+
+.kanban-card.info {
+  border-right: 3px solid #5bc0de;
+  border-left: 1px solid #e7eaec;
+}
+
+.kanban-card.success {
+  border-right: 3px solid #5cb85c;
+  border-left: 1px solid #e7eaec;
+}
+
+.notify-stack{
+  left:10px !important;
+  right:unset !important;;
+}
+
+.ui-spinner-button {
+    right: unset;
+  left:0;
+}
+
+input.hasDatepicker,
+input.ui-mask{
+  direction: ltr;
+  text-align: right;
+}
+
+.panel-related .panel-header .icons-bar > a, 
+.one2many-item .navbar .icons-bar > a, 
+.many2many-item .navbar .icons-bar > a {
+  float:right;
+}
+
+.nav-select a.nav-label::after {
+    transform: scale(-0.72) rotate(45deg);
+    left: -16px;
+    right:unset;
+}
+
+.nav-select a.nav-label {
+    padding: 0 32px 0 16px;
+}
+
+.nav-select li.nav-step:first-child a.nav-label {
+    padding-right: 18px;
+}
+
+.form-item-container > .translate-icon {
+    right: unset;
+    left:0;
 }
