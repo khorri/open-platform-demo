@@ -458,3 +458,26 @@ margin: 5px 4px;
     border-radius: 4px !important;
     box-shadow: unset;
 }
+
+.loading-container{
+    top:30% !important;
+
+    
+}
+
+.loading-counter {
+  background-image: url('img/loader2.gif'); 
+  background-position-x: right;
+  background-color: #fff; 
+  background-position-y: top 5px;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  background-size: 48px;
+  border-style:solid;
+  border-width:1px; 
+  border-color:#f00;
+  border-radius: 8px;
+  padding: 60px 20px 10px;
+  color: #f00;
+  font-size: 15px;
+}

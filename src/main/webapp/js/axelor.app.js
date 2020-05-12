@@ -59,7 +59,7 @@
     }
 
     if (loadingElem === null) {
-      loadingElem = $('<div><span class="label label-important loading-counter">' + _t('Loading') + '...</span></div>')
+      loadingElem = $('<div class="loading-container"><span class="label label-important loading-counter">' + _t('Loading') + '...</span></div>')
         .css({
           position: 'fixed',
           top: 0,
