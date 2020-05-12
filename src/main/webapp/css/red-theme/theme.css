@@ -271,11 +271,13 @@ margin: 5px 4px;
 
 .record-toolbar .btn-group .btn{
     text-shadow: none;    
+    background: #fff !important;
     
 }
 
 .record-toolbar .btn-group .btn:hover{
     color: #f44;
+    background: #fff !important;
 }
 
 .btn-group{
