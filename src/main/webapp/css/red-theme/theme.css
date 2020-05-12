@@ -24,6 +24,7 @@ header .navbar-inner{
     background-image: -webkit-linear-gradient(right, rgb(120,22,2),  rgb(238,90,2));
     background-image: -o-linear-gradient(right, rgb(120,22,2),  rgb(238,90,2));
     background-image: linear-gradient(to right, rgb(120,22,2), rgb(236, 5, 5));
+    border-bottom: 1px solid #faa;
 }
 
 #sidebar {
@@ -410,4 +411,50 @@ margin: 5px 4px;
 .many2many-item .navbar .icons-bar{
     margin-left: 2px;
     margin-right:2px;
+}
+
+.tag-select, .tag-select .label {
+    border-radius: 3px;
+    
+}
+
+.cards-view .kanban-card-container .kanban-card {
+  background-image: url('img/hexgon-pattern.png'); 
+  background-position-x: right;
+  background-color: #fff7ec; 
+  background-position-y: bottom 0;
+  background-repeat: repeat-y;
+  border-style:solid;
+  border-width:1px 2px 3px 1px; 
+  border-color:#fca;
+  border-radius: 4px
+}
+
+.cards-view .card-image img {
+    border-radius: 32px;
+    background: white;
+    border-width:0px 1px 1px 0px;
+    border-style: solid;
+    border-color: #fcc;
+}
+
+.cards-view .card-image strong {
+    color:#844;
+}
+
+.kanban-column {
+    background-color: #d7ecff;
+    margin: 12px 6px 0;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border:1px solid #abf;
+}
+
+.kanban-view {
+    padding-bottom: 6px;
+}
+
+.progress, .progress .bar {
+    border-radius: 4px !important;
+    box-shadow: unset;
 }

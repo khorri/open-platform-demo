@@ -918,3 +918,8 @@ input.ui-mask{
     right: unset;
     left:0;
 }
+
+.tag-select ul {
+    margin-right: unset;
+    margin-left: 16px;
+}
