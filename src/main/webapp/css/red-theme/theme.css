@@ -87,9 +87,9 @@ input[type="color"],
 body textarea:enabled:focus,
 body textarea:enabled:active,
 body textarea:enabled.active,
-body input[type]:enabled:focus:not(.ui-state-error),
-body input[type]:enabled:active:not(.ui-state-error),
-body input[type]:enabled.active:not(.ui-state-error){
+body input[type]:enabled:focus,
+body input[type]:enabled:active,
+body input[type]:enabled.active{
     border: 1px solid #c60101 !important;
     outline: 0;
     box-shadow: 0 0 0 .2rem rgba(232,62,140,.25);
@@ -111,11 +111,13 @@ body select:enabled.active{
     color: #495077;
 }
 
+.slick-headerrow-columns .slick-headerrow-column input[type=text]:active,
+.slick-headerrow-columns .slick-headerrow-column input[type=text]:focus,
 .slick-headerrow-columns .slick-headerrow-column input[type=text]{
     margin: 0px !important;
     border-radius: 0px !important;
     height: 25px !important;
-    
+    border:none !important;
 }
 
 .progress {
@@ -137,7 +139,7 @@ body select:enabled.active{
 
 .btn.btn-default,
 .btn.btn-default:hover{
-    background-color: #68B8FB;
+    background-color: #ce0202;
 }
 
 .btn:enabled:focus,
@@ -174,6 +176,18 @@ body select:enabled.active{
     font-size: 15px;
     background: #fff;
     border: 1px solid #ccc !important;
+    padding-left:2px;
+    
+}
+
+a {
+    color: #be0202;
+}
+
+a:hover, 
+a:focus {
+    color: #ce0202;
+    text-decoration: underline;
 }
 
 .panel-layout .form-item-container.editable .tag-select.focus{
@@ -202,7 +216,7 @@ body select:enabled.active{
 
 .record-toolbar button:not([disabled]), 
 .record-toolbar .btn:not([disabled]) {
-    background-color: #ce0202;
+    background-color: #ce0202 !important;
     border:1px solid #f5f5f5;
 }
 
@@ -218,6 +232,10 @@ body select:enabled.active{
     color:#fff;
 }
 
+.record-toolbar .caret{
+    border-top: 4px solid #fff !important;
+}
+
 #view-tabs {
     background: #eef2f6;
 }
@@ -228,7 +246,7 @@ body select:enabled.active{
 }
 
 .nav-tabs-wrap {
-    background: #eef2f6;
+    background: #fff; 
     border-bottom: none;
 }
 
@@ -577,3 +595,38 @@ header .navbar .nav-shortcuts .nav-link-tasks .badge {
     margin: -7px 0px 10px 4px;
 }
 
+.view-pane {
+ background: #fff;   
+}
+
+.mail-thread .mail-message-icons a.btn.dropdown-toggle,
+.mail-thread .mail-message-icons a.btn.dropdown-toggle:hover,
+.mail-thread .mail-message-icons a.btn.dropdown-toggle:focus,
+.mail-thread .mail-message-icons .open a.btn.dropdown-toggle {
+    background: #ce0202 !important;
+}
+
+.mail-thread .mail-message-icons a.btn.dropdown-toggle i,
+.mail-thread .mail-message-icons a.btn.dropdown-toggle:hover i,
+.mail-thread .mail-message-icons a.btn.dropdown-toggle:focus i,
+.mail-thread .mail-message-icons .open a.btn.dropdown-toggle i {
+    color:#fff;
+}
+
+.dropdown-menu > li > a:hover, 
+.dropdown-menu > li > a:focus, 
+.dropdown-submenu:hover > a, 
+.dropdown-submenu:focus > a {
+    color: #ffffff;
+    background-color: #ce0202;
+    background-image: none;
+}
+
+.dms-file-list .record-toolbar .breadcrumb {
+    margin: 0;
+    padding: 11px 8px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    background-color: #fff;
+}
