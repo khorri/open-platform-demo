@@ -3,7 +3,11 @@
 @import url("../lib/jquery.timepicker/jquery-ui-timepicker-addon.css");
 
 @import url("../lib/bootstrap/css/bootstrap.css");
+@import url("../lib/bootstrap/css/bootstrap.rtl.css");
 @import url("../lib/bootstrap/css/bootstrap-responsive.css");
+@import url("../lib/bootstrap/css/bootstrap-responsive.rtl.css");
+@import url("../lib/bootstrap/css/rtl-xtra.min.css");
+
 @import url("../lib/font-awesome/css/font-awesome.css");
 
 @import url("../lib/slickgrid/slick.grid.css");
@@ -49,4 +53,7 @@
 @import url("colors.css");
 
 @import url("print.css") print;
+
+@import url("dir.rtl.css");
+
 

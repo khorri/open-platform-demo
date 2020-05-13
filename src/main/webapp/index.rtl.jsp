@@ -68,7 +68,7 @@ String tenantId = (String) session.getAttribute("tenantId");
 
 %>
 <!DOCTYPE html>
-<html lang="<%= info.getPageLang() %>" ng-app="axelor.app" ng-controller="AppCtrl" ng-cloak>
+<html lang="<%= info.getPageLang() %>" ng-app="axelor.app" ng-controller="AppCtrl" ng-cloak dir="rtl">
   <head>
     <meta charset="utf-8">
     <title><%= appTitle %></title>
@@ -78,12 +78,12 @@ String tenantId = (String) session.getAttribute("tenantId");
     <meta name="author" content="<%= appAuthor %>">
 
     <!-- Styles -->
-    <x:style src="css/application.css" />
+    <x:style src="css/application.rtl.css" />
     <% for (String style : StaticResources.getStyles()) { %>
     <link href="<%= style %>" rel="stylesheet">
     <% } %>
     <% if (appTheme != null) { %>
-   <link href="css/<%= appTheme %>/theme.css" rel="stylesheet">
+    <link href="css/<%= appTheme %>/theme.css" rel="stylesheet">
     <% } %>
     <% if (appStyle != null) { %>
     <style>
